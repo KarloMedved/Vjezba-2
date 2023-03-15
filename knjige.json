@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Vlak u snijegu",
+        "author": "Mato Lovrak",
+        "pages": 350,
+        "Available": false
+    },
+    {
+        "title": "Dune",
+        "author": "Frank Herbert",
+        "pages": 420,
+        "Available": true
+    },
+    {
+        "title": "Biblija",
+        "author": "N\/A",
+        "pages": 600,
+        "Available": false
+    },
+    {
+        "title": "Laws of human nature",
+        "author": "Robert Greene",
+        "pages": 570,
+        "available": true
+    }
+]
