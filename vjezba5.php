@@ -1,12 +1,49 @@
+<?php
+$studentsJson = file_get_contents(__DIR__ . '/polaznici.json');
+
+$students = json_decode($studentsJson, true);
+?>
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vjezba</title>
-</head>
+
 <body>
-    
-</body>
-</html>
+<table>
+<table border="1" cellpadding="10">
+  <tr>
+    <th>Ime</th>
+    <th>Prezime</th>
+    <th>Godine</th>
+    <th>Email</th>
+    <th>Telefon</th>
+  </tr>
+  <?php foreach($students as $student) {
+    echo '<tr>';
+    echo '<td>'. $student['name'] . '<\td>';
+    echo '<td>'. $student['surname'] . '<\td>';
+    echo '<td>'. $student['age'] . '<\td>';
+    echo '<td>'. $student['email'] . '<\td>';
+    echo '<td>'. $student['phone'] . '<\td>';
+
+
+
+   } ?>
+  </table>
+
+  <?php
+
+$students[] = [
+    "name"=>"Pero",
+    "lastname" => "Perić",
+    "year" => 28,
+    "email" => "peroperić@gmail.com",
+    "phone" => 3852564256
+  ];
+  
+  $studentJson = json_encode($students);
